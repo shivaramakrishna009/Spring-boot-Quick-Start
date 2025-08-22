@@ -1,4 +1,4 @@
-package com.krishnaallu009.springbootQiuckStart;
+package com.krishnaallu009.springbootQiuckStarter;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
