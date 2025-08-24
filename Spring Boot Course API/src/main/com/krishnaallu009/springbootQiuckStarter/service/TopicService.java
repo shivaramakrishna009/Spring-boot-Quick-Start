@@ -28,4 +28,11 @@ public class TopicService {
     public void addTopic(Topic topic) {
         topics.add(topic);
     }
+
+    public void updateTopic(String id, Topic topic) {
+        topics.stream().filter(t -> t.getId().equals(id)).findFirst().ifPresent(t -> {
+            t.setName(topic.getName());
+            t.setDescription(topic.getDescription());
+        });
+    }
 }
