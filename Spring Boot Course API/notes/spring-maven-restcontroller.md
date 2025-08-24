@@ -32,6 +32,33 @@ the response body, typically in formats like JSON or XML.
 
 It is used to route web requests, making sure the right method handles the requested **URL**, **HTTP method**, **headers**, or **parameters**.
 
+# Common Attributes of `@RequestMapping`:
+- `value` or `path`: Specifies the URL path to map to.
+- `method`: Specifies the HTTP method (GET, POST, PUT, DELETE, etc.)
+- `params`: Specifies request parameters that must be present.
+- `headers`: Specifies request headers that must be present.
+
+# `@PostMapping` Annotation:
+## What is `@PostMapping`?
+`@PostMapping` is a specialized version of the `@RequestMapping` annotation in **Spring MVC** and **Spring Boot**.
+It is specifically used to handle HTTP `POST` requests, which are typically used to create new resources on the server.
+
+# `@GetMapping` Annotation:
+## What is `@GetMapping`?
+`@GetMapping` is a specialized version of the `@RequestMapping` annotation in **Spring MVC** and **Spring Boot**.
+It is specifically used to handle HTTP `GET` requests, which are typically used to retrieve data from the server.
+
+# `@PutMapping` Annotation:
+## What is `@PutMapping`?
+
+`@PutMapping` is a specialized version of the `@RequestMapping` annotation in **Spring MVC** and **Spring Boot**.  
+It is specifically used to handle HTTP `PUT` requests, which are typically used to update existing resources on the server.
+
+# `@DeleteMapping` Annotation:
+## What is `@DeleteMapping`?
+`@DeleteMapping` is a specialized version of the `@RequestMapping` annotation in **Spring MVC** and **Spring Boot**.  
+It is specifically used to handle HTTP `DELETE` requests, which are typically used to delete resources from the server.
+
 # Bill of Materials (BOM) in Spring
 
 ## What is a BOM?
@@ -98,3 +125,22 @@ In Maven, you define the BOM under the `<dependencyManagement>` section, and the
         <artifactId>spring-boot-starter-data-jpa</artifactId>
     </dependency>
 </dependencies>
+```
+
+# Annotations in Spring Controllers to Get Values from the URL
+
+In Spring MVC / Spring Boot, controller methods often need values from the URL, query parameters, headers, or body.  
+Spring provides several annotations for this purpose:
+
+---
+
+## 1. `@PathVariable`
+- Extracts **values from the URI path**.
+- Example URL: `/users/101`
+
+```java
+@GetMapping("/users/{id}")
+public String getUserById(@PathVariable("id") int userId) {
+    return "User ID: " + userId;
+}
+```
