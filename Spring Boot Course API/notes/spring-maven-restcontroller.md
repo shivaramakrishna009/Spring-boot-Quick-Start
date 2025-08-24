@@ -98,3 +98,22 @@ In Maven, you define the BOM under the `<dependencyManagement>` section, and the
         <artifactId>spring-boot-starter-data-jpa</artifactId>
     </dependency>
 </dependencies>
+```
+
+# Annotations in Spring Controllers to Get Values from the URL
+
+In Spring MVC / Spring Boot, controller methods often need values from the URL, query parameters, headers, or body.  
+Spring provides several annotations for this purpose:
+
+---
+
+## 1. `@PathVariable`
+- Extracts **values from the URI path**.
+- Example URL: `/users/101`
+
+```java
+@GetMapping("/users/{id}")
+public String getUserById(@PathVariable("id") int userId) {
+    return "User ID: " + userId;
+}
+```
