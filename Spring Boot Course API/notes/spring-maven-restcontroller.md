@@ -43,17 +43,21 @@ It is used to route web requests, making sure the right method handles the reque
 `@PostMapping` is a specialized version of the `@RequestMapping` annotation in **Spring MVC** and **Spring Boot**.
 It is specifically used to handle HTTP `POST` requests, which are typically used to create new resources on the server.
 
+# `@GetMapping` Annotation:
+## What is `@GetMapping`?
+`@GetMapping` is a specialized version of the `@RequestMapping` annotation in **Spring MVC** and **Spring Boot**.
+It is specifically used to handle HTTP `GET` requests, which are typically used to retrieve data from the server.
+
 # `@PutMapping` Annotation:
 ## What is `@PutMapping`?
 
 `@PutMapping` is a specialized version of the `@RequestMapping` annotation in **Spring MVC** and **Spring Boot**.  
 It is specifically used to handle HTTP `PUT` requests, which are typically used to update existing resources on the server.
 
-# `@GetMapping` Annotation:
-## What is `@GetMapping`?
-`@GetMapping` is a specialized version of the `@RequestMapping` annotation in **Spring MVC** and **Spring Boot**.
-It is specifically used to handle HTTP `GET` requests, which are typically used to retrieve data from the server.
-
+# `@DeleteMapping` Annotation:
+## What is `@DeleteMapping`?
+`@DeleteMapping` is a specialized version of the `@RequestMapping` annotation in **Spring MVC** and **Spring Boot**.  
+It is specifically used to handle HTTP `DELETE` requests, which are typically used to delete resources from the server.
 
 # Bill of Materials (BOM) in Spring
 
