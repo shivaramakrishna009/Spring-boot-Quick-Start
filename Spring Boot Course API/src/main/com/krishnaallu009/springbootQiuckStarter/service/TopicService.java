@@ -12,7 +12,7 @@ import java.util.List;
 @Service
 public class TopicService {
 
-    private TopicRepository topicRepository;
+    private final TopicRepository topicRepository;
 
     @Autowired
     public TopicService(TopicRepository topicRepository) {
