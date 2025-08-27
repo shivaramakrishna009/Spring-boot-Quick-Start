@@ -179,5 +179,39 @@ topicRepo.save(existingTopic);  // UPDATE happens
 * The decision is based on the **primary key (ID)**.
 * If you provide a wrong ID or try to update an entity that doesn’t exist, JPA may still try to insert it, which can lead to unexpected behavior.
 
+---
+
+# 📌 Spring Data JPA Repository Query Method Naming Conventions
+
+You can create query methods in Spring Data JPA by simply defining method names following specific naming patterns. 
+Spring will automatically generate the queries based on those names.
+
+| **Method Name Pattern**                     | **Purpose**                                                        |
+| ------------------------------------------- | ------------------------------------------------------------------ |
+| `findBy<Property>`                          | Find entities by a specific property                               |
+| `findBy<Property1>And<Property2>`           | Find entities by multiple properties                               |
+| `findBy<Property>Or<Property>`              | Find entities by either of two properties                          |
+| `countBy<Property>`                         | Count entities by a specific property                              |
+| `deleteBy<Property>`                        | Delete entities by a specific property                             |
+| `existsBy<Property>`                        | Check if an entity exists by a specific property                   |
+| `findAllBy<Property>`                       | Find all entities matching a specific property                     |
+| `findTopNBy<Property>`                      | Find the top N entities by a specific property                     |
+| `findFirstNBy<Property>`                    | Find the first N entities by a specific property                   |
+| `findBy<Property>OrderBy<Property>Asc/Desc` | Find entities ordered by a specific property                       |
+| `findBy<Property>Between`                   | Find entities with a property value between two values             |
+| `findBy<Property>Like`                      | Find entities with a property value matching a pattern             |
+| `findBy<Property>In`                        | Find entities with a property value in a given list                |
+| `findBy<Property>IsNull`                    | Find entities where a property is null                             |
+| `findBy<Property>IsNotNull`                 | Find entities where a property is not null                         |
+| `findBy<Property>StartingWith`              | Find entities where a property starts with a given value           |
+| `findBy<Property>EndingWith`                | Find entities where a property ends with a given value             |
+| `findBy<Property>Containing`                | Find entities where a property contains a given value              |
+| `findBy<Property>IgnoreCase`                | Find entities where a property matches a value, ignoring case      |
+| `findBy<Property>GreaterThan`               | Find entities where a property is greater than a given value       |
+| `findBy<Property>LessThan`                  | Find entities where a property is less than a given value          |
+| `findBy<Property>GreaterThanEqual`          | Find entities where a property is greater than or equal to a value |
+| `findBy<Property>LessThanEqual`             | Find entities where a property is less than or equal to a value    |
+
+---
 
 
