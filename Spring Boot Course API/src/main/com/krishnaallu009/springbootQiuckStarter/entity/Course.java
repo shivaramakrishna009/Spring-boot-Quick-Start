@@ -2,6 +2,7 @@ package com.krishnaallu009.springbootQiuckStarter.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Course {
@@ -10,17 +11,17 @@ public class Course {
     private String id;
     private String name;
     private String description;
-
+    @ManyToOne
     private Topic topic;
 
     public Course() {
     }
 
-    public Course(String id, String name, String description, Topic topic) {
+    public Course(String id, String name, String description, String topicId) {
         this.id = id;
         this.name = name;
         this.description = description;
-        this.topic  = topic;
+        this.topic  = new Topic(topicId, "", "");
     }
 
     public String getId() {

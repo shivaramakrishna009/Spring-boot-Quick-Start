@@ -26,12 +26,14 @@ public class CourseController {
 
     @RequestMapping(method = RequestMethod.POST, value = "/topics/{topicId}/courses")
     public void addCourse(@PathVariable String topicId, @RequestBody Course course) {
+        // Below line is to make sure that the course is associated with the correct topic
         course.setTopic(new Topic(topicId, "", ""));
         courseService.addCourse(course);
     }
 
-    @RequestMapping(method = RequestMethod.PUT, value = "/topics/{topicId}/courses/{id}")
+    @RequestMapping(method = RequestMethod.PUT, value = "/topics/{topicId}/courses/{courseId}")
     public void updateCourse(@RequestBody Course course, @PathVariable String topicId, @PathVariable String courseId) {
+        // below line is to make sure that the course is associated with the correct topic
         course.setTopic(new Topic(topicId, "", ""));
         courseService.updateCourse(courseId, course);
     }
